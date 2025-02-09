@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Space Grotesk", sans-serif;
+    font-style: normal;
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+header {
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #222;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+header a i:hover {
+    color: #53ceff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 0 120px 0;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+.info {
+    color: #ccc;
+    display: block;
+    font-size: 16px;
+    transition: background-color 4s ease;
+    margin-top: 20px;
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    border-top: 1px solid #222;
+    background-color: #0d0d0d;
+}
+
+footer p {
+    font-size: 15px;
+    margin: 28px;
+}
+
+footer a {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+footer a:hover {
+    color: #53ceff;
+}
+
+/* new things below */
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.upload-button {
+    background: linear-gradient(135deg, #53fff1 0%, #3498db 100%);
+    color: #071111;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 45px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 1s ease, transform 0.5s ease;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-size: 200% 100%;
+}
+
+.upload-button:hover {
+    background-position: 100% 0;
+    transform: scale(1.05);
+}
+
+.car-card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #0d0d0d;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+
+.car-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: scale(1.02);
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.car-details {
+    padding: 15px;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+.car-details h2,
+.car-details p {
+    margin: 10px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.car-details h2 {
+    font-size: 1.5em;
+    color: #3498db;
+}
+
+.make {
+    text-transform: uppercase;
+}
+
+.car-details p {
+    font-size: 1em;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .car-card {
+        max-width: 90%;
+    }
+
+    .car-details h2 {
+        font-size: 1.2em;
+    }
+
+    .car-details p {
+        font-size: 0.9em;
+    }
+}
+
+.file-info {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ccc;
+    margin-top: 8px;
+}
+
+.remove-button {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.generating {
+    background: linear-gradient(to right, #53fff1, #3498db, #53fff1);
+    background-size: 200% 100%;
+    animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.car-make-logo {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 10px auto;
+    filter: invert(1) brightness(2); /* white */
+    transition: transform 0.3s ease;
+    text-align: center; /* center */
+}
+
+.car-make-logo:hover {
+    transform: scale(1.1);
+}
+
+#dropHereText {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.drop-zone {
+    border: 3px dashed #53FFF1;
+    border-radius: 15px;
+    padding: 40px;
+    background-color: rgba(83, 255, 241, 0.1);
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #53FFF1;
+    font-weight: bold;
+}
+
+.drop-text {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.upload-section {
+    position: relative;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+
+.modal-title {
+    color: #FF5F5F;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-text {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+@keyframes modalSlide {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-buttons {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.donate-btn {
+    background-color: #FF5F5F;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.close-btn {
+    background-color: transparent;
+    color: #ccc;
+    padding: 12px 25px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transition: all 0.3s;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.close-btn.active {
+    cursor: pointer;
+    opacity: 1;
+    border-color: #666;
+}
+
+.donate-btn:hover {
+    background-color: #FF4545;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 95, 95, 0.3);
+}
+
+.close-btn.active:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .modal-title {
+        font-size: 20px;
+    }
+    
+    .modal-text {
+        font-size: 14px;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6VP3VL6LR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-J6VP3VL6LR');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle AI - Identify Any Vehicle With AI</title>
+  <meta name="description" content="Upload an image of any vehicle, and our Advanced AI will instantly recognize the make, model, and more.">  
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <script src="https://kit.fontawesome.com/0d5ced209e.js" crossorigin="anonymous"></script>
+
+  <!-- Open Graph Tags -->
+  <meta property="og:url" content="https://vehicle-ai.vercel.app">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vehicle AI - Identify Any Vehicle With AI">
+  <meta property="og:description" content="Upload an image of any vehicle, and our Advanced AI will instantly recognize the make, model, and more.">
+  <meta property="og:image" content="https://vehicle-ai.vercel.app/img/preview.jpg">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="vehicle-ai.vercel.app">
+  <meta property="twitter:url" content="https://vehicle-ai.vercel.app">
+  <meta name="twitter:title" content="Vehicle AI - Identify Any Vehicle With AI">
+  <meta name="twitter:description" content="Upload an image of any vehicle, and our Advanced AI will instantly recognize the make, model, and more.">
+  <meta name="twitter:image" content="https://vehicle-ai.vercel.app/img/preview.jpg">
+</head>
+
+<body>
+  <div id="donationModal" class="modal">
+    <div class="modal-content">
+        <h2 class="modal-title">Keep This Free and Open Source</h2>
+        <p class="modal-text">Hi, I'm a developer and the creator of this project. <strong>It's always been free and open source</strong>, and I’m working hard on <strong>new version</strong> that will improve vehicle identification a lot compared to what it can do now.</p>
+        <p class="modal-text">If you've found value here, consider supporting my work:</p>
+        <div class="modal-buttons">
+          <button id="closeButton" class="close-btn">Wait 5s</button>
+            <button id="donateButton" class="donate-btn" onclick="window.open('https://ko-fi.com/detalhe', '_blank')">👉 Donate on Ko-fi</button>
+        </div>
+        <p class="modal-text">Your support keep this free and open-source! Thank you! 🙏</p>
+    </div>
+  </div>
+
+  <header>
+    <a href="#" id="infoIcon" aria-label="How it works?"><i class="fa-regular fa-circle-question"></i></a>
+    <a href="/" aria-label="Home">vehicle-ai</a>
+    <a href="https://github.com/detalhe/vehicle-ai" target="_blank" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+  </header>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Identify Any Vehicle With AI</h1>
+      <p>Upload an image of any vehicle, and <strong>Advanced AI</strong> will instantly recognize the make, model, year, and more.</p>
+      <form action="/upload" method="post" enctype="multipart/form-data" class="upload-section" id="uploadForm">
+        <input type="file" name="image" accept="image/*" required style="display: none;" id="fileInput">
+        <label for="fileInput" class="upload-button" id="uploadButton">Upload Image</label>
+        <button type="submit" class="upload-button" id="runButton" style="display: none;">Run</button>
+        <div class="file-info" id="fileInfo" style="display: none;">
+          <span class="file-name" id="fileName"></span>
+          <button type="button" class="remove-button" id="removeButton">X</button>
+        </div>
+        <p class="drop-text" id="dropText">or drag and drop your image here</p>
+        <div class="drop-zone" id="dropZone" style="display: none;">
+          <p id="dropHereText" style="display: none;">Drop Here</p>
+        </div>      
+      </form>
+    </div>
+  </div>
+
+  <div class="car-card-section">
+    <div id="errorMessage" style="display: none; color: #a3212e; margin-bottom: 10px;"></div>
+    <div class="car-card">
+      <img src="/img/default.webp" alt="Car Image" class="car-image" id="carImage">
+      <div class="car-details">
+        <img src="" alt="Car Make Logo" class="car-make-logo" id="carMakeLogo" style="display: none; width: 70px; height: auto;">
+        <h2 class="car-make">Make: <span class="make" id="carMake">N/A</span></h2>
+        <p class="car-model">Model: <span id="carModel">N/A</span></p>
+        <p class="car-color">Color: <span id="carColor">N/A</span></p>
+        <p class="car-year">Year: <span id="carYear">N/A</span></p>
+      </div>
+    </div>
+    <div class="more">
+      <!--<a href="#" class="info" id="myBtn" aria-label="How it works">Upload another image</a>-->
+      <a href="https://ko-fi.com/detalhe" target="_blank" class="info" id="myBtn" aria-label="How it works">Buy me a coffee!</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Developed by <a href="https://github.com/detalhe" target="_blank" aria-label="Eduardo Monteiro's GitHub">Eduardo Monteiro</a>
+      <!--<a href="https://www.linkedin.com/in/eduardo-monteiro1/" target="_blank" aria-label="Eduardo Monteiro's LinkedIn"><i class="fab fa-linkedin"></i></a>-->
+      <a href="https://github.com/detalhe" target="_blank" aria-label="Eduardo Monteiro's GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/updudu1" target="_blank" aria-label="Eduardo Monteiro's Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    </p>
+  </footer>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
